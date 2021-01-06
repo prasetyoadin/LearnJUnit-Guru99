@@ -1,0 +1,28 @@
+package com.example.training.jUnitTestSuiteExample;
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+
+public class SuiteTest1 {
+
+	public String message = "Sarp Adi";
+	
+//	JUnitMessage junitMessage = new JUnitMessage(message);
+	
+	@Test(expected = ArithmeticException.class)
+	public void testJunitMessage() {
+		
+		System.out.println("Junit Message is printing ");
+		System.out.println(message);
+	}
+	
+	public void testJunitHiMessage() {
+		
+		message = "Hi! " + message;
+		System.out.println("Juni Hi Message is printing");
+		assertEquals(message, "Hi! Sarp Adi");
+		
+	}
+	
+}
